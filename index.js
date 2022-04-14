@@ -4,7 +4,8 @@ function reverse_a_number(n)
     const strArray = [...str];    
 	return strArray.reverse().join('');	
 }
-console.log(reverse_a_number(32243));
+
+//console.log(reverse_a_number(32243));
 
 function alphabetical_order(str)
 {
@@ -12,7 +13,7 @@ function alphabetical_order(str)
     const sortedArray = strArray.sort();
     return sortedArray.join('');
 }
-console.log(alphabetical_order('webmaster'));
+//console.log(alphabetical_order('webmaster'));
 
 function convert_first_letter_to_uppercase(str)
 {
@@ -32,21 +33,22 @@ function convert_first_letter_to_uppercase(str)
     return retArray.join('');
 }
 
-console.log(convert_first_letter_to_uppercase('the quick brown fox'));
+//console.log(convert_first_letter_to_uppercase('the quick brown fox'));
 
 function check_if_prime(n)
 {
+    console.log(`******* Getting ${n} as input`);
     if(n <= 2)
         return true;
     for(let i = 2; i < n; i++)
         if(n % i == 0)
             return false;
-    
+    console.log('******** returning true');
     return true;
 }
 
-console.log(`7 is prime ${check_if_prime(7)}`);
-console.log(`8 is prime ${check_if_prime(8)}`);
+//console.log(`7 is prime ${check_if_prime(7)}`);
+//console.log(`8 is prime ${check_if_prime(8)}`);
 
 function get_unique_char(str)
 {
@@ -60,4 +62,18 @@ function get_unique_char(str)
     return uniq;
 }
 
-console.log(get_unique_char('thequickbrownfoxjumpsoverthelazydog'));
+function get_unique_char2(str)
+{
+    return get_unique_char(str);
+}
+
+module.exports = reverse_a_number;
+module.exports = alphabetical_order;
+module.exports = convert_first_letter_to_uppercase;
+module.exports = check_if_prime;
+module.exports = get_unique_char;
+module.exports = get_unique_char2;
+
+
+
+
